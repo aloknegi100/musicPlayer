@@ -1,0 +1,852 @@
+/*   to remove default padding of tags */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body of music player */
+body {
+    
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: #0b1320;
+    flex-wrap: wrap;
+    box-shadow: 0 0 2px 10px rgba(0, 0, 0, 0.23);
+}
+
+/* navbar of music player */
+header {
+    width: 95%;
+    height: 13vh;
+    background-color: #111727;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* brand ninja studio image */
+header img:first-child {
+    height: 80%;
+    border-radius: 50%;
+}
+
+/* setting color and font sizes of header */
+header span h1 {
+    color: white;
+    margin-left: 1rem;
+}
+
+header span div {
+    margin-left: 1rem;
+    color: #4c5262;
+    ;
+}
+
+header span h3 {
+    color: white;
+    margin: 0 3.5rem;
+
+
+}
+
+/* on hover of header style set */
+header span h3:hover {
+    color: aqua;
+    border-bottom: 2px solid blue;
+    transform: scale(1.1);
+}
+
+/* search box  */
+.search-box {
+    position: absolute;
+    left: 60vw;
+    display: flex;
+    align-items: center;
+}
+
+/* search box animation or transition on hover */
+.search-box:hover>.search-text {
+    width: 20vw;
+    padding: 1rem;
+
+}
+
+/* input type text */
+.search-text {
+    width: 0;
+    height: 2.7rem;
+    border-radius: 10rem;
+    transition: .7s;
+    outline: none;
+    border: transparent;
+
+}
+
+/* icon of search */
+.search-icon {
+    color: white;
+    font-size: 1.5rem;
+    background-color: aqua;
+    padding: .5rem;
+    border-radius: 50%;
+    position: relative;
+    left: -2.5rem;
+
+}
+
+/* notification */
+.bell {
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    right: 10vw;
+}
+
+/* hover of notification */
+.bell:hover {
+    transform: scale(1.1);
+    color: aqua;
+}
+
+/* profile photo in this case elon musk */
+header img:last-child {
+    height: 80%;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    border: 3px solid aqua;
+    border-radius: 50%;
+}
+
+/* main of musoc player */
+main {
+    width: 70%;
+    height: auto;
+    position: relative;
+    box-shadow: 0 0 2px 10px rgba(0, 0, 0, 0.23);
+}
+
+/* setting defaulyt style for main */
+main h1 {
+    color: white;
+    padding: 1rem;
+}
+
+/* aside containing playlist */
+aside {
+    width: 25%;
+    height: auto;
+    margin-top: 0.5rem;
+    background-color: #111727;
+    margin-left: 1rem;
+    box-shadow: 0 0 20px 4px rgba(0, 255, 255, 0.204);
+
+}
+
+#close {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 4vw;
+}
+
+#close:hover {
+    color: red;
+}
+
+
+#nav {
+    position: absolute;
+    color: white;
+    right: 0vw;
+    font-size: 2rem;
+    z-index: 2;
+    display: none;
+
+}
+
+#playlist {
+    width: 100%;
+    height: 10vh;
+    padding: 1rem;
+    color: white;
+
+}
+
+#playlist h1 {
+    font-size: 2rem;
+
+}
+
+#playlist-songs .song {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    position: relative;
+    color: #4c5262;
+    padding: .5rem;
+    align-items: center;
+    box-shadow: 0 0 3px 3px #0b1320;
+
+
+
+}
+
+#playlist-songs .song img {
+    height: 7vh;
+    margin: 1rem;
+}
+
+#playlist-songs .song div h4 {
+    color: white;
+}
+
+.queue {
+    text-decoration: none;
+    position: relative;
+    left: 70%;
+    bottom: 1.5rem;
+    padding-right: 1rem;
+    color: white;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    right: 4%;
+    top: 24%;
+    background-color: white;
+    padding: .5rem;
+
+}
+
+.submenu ul li {
+    list-style: none;
+}
+
+.submenu ul li:hover {
+    background-color: #0b1320;
+}
+
+submenu ul {
+    list-style: none;
+
+
+
+}
+
+.submenu a {
+    text-decoration: none;
+
+
+}
+
+.queue:hover+.submenu {
+    display: block;
+    color: aqua;
+}
+
+/* hover for the aside section */
+#playlist-songs .song:hover {
+    box-shadow: 0 0 3px 3px aqua;
+    transform: scale(1.1);
+    transition: .8s;
+}
+
+/* footer of music player containing pause play and slider  */
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(2, 2, 30);
+    box-shadow: 0 0 2px 10px rgba(18, 18, 18, 0.874);
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+
+}
+
+/* hover effect for icon in footer */
+
+footer i:hover {
+    color: aqua;
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+/* font awesome icon in footer */
+footer i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* music slider */
+.music-slider {
+    width: 35%;
+    position: relative;
+    height: 100%;
+    margin-right: 2rem;
+
+}
+
+/* fontawesome icons for speaker headphone and compose */
+.utilities {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-slider .down {
+
+    color: white;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.music-slider .top {
+    display: flex;
+    width: 57%;
+    margin-left: 1rem;
+    justify-content: space-evenly;
+}
+
+.music-slider .top i {
+    font-size: 1.5rem;
+    margin-left: 50%;
+    margin-top: .5rem;
+
+}
+
+.slider {
+    width: 100%;
+    background-color: aqua;
+    position: absolute;
+    border-bottom: 3px solid aqua;
+
+}
+
+.music-slider {
+    height: 100%;
+}
+
+.top {
+    color: white;
+    position: absolute;
+    height: 50%;
+}
+
+footer i {
+    margin: 1rem;
+}
+
+/* music name and image */
+footer img {
+    height: 80%;
+    margin-left: 2rem;
+    width: 4rem;
+
+}
+
+footer .footer-song {
+    color: white;
+    margin-left: 2rem;
+}
+
+footer .footer-song .footer-sub {
+    color: #4c5262;
+}
+
+.good-evening {
+    color: white;
+    font-size: 1.6rem;
+    background-color: #111727;
+    padding: 1rem 0rem;
+
+
+}
+
+/* animation of good evening */
+.good-evening h1 {
+    animation: good 5s linear 0s infinite alternate;
+}
+
+.banner {
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: .3rem;
+}
+
+.banner img {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+}
+
+.banner img:nth-child(2) {
+    transform: translateX(53%);
+    z-index: 2;
+}
+
+.banner img:nth-child(3) {
+    transform: translateX(107%);
+}
+
+.banner img:hover {
+    z-index: 100;
+    box-shadow: 0 0 6px 6px black;
+
+}
+
+.latest-release {
+    padding: 1rem;
+    color: white;
+}
+
+
+
+.music div p {
+    color: #4c5262;
+    margin-top: .5rem;
+    margin-left: 2rem;
+
+}
+
+.music div h2 {
+    color: white;
+    margin-left: 2rem;
+
+}
+
+.container-music {
+    height: 30vh;
+    position: relative;
+    display: flex;
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.223);
+
+}
+
+.container-music .album {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.container-music .album i {
+    color: white;
+    opacity: 0;
+}
+
+.container-music .album:hover i {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 40%;
+    right: 75%;
+    opacity: 1;
+    transition: .3s;
+}
+
+.container-music .album img {
+    height: 100%;
+    width: 50%;
+}
+
+.container-music .album .music-name {
+    width: 50%;
+    color: white;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+.container-music .album .music-name .subtitle {
+    color: #4c5262;
+}
+
+.container-music .album:hover {
+    transform: scale(1.01);
+    background-color: aqua;
+    box-shadow: 0 0 6px 6px black;
+    transition: 1s;
+}
+
+.popular-artist {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.popular-artist h1 {
+    color: white;
+    padding: 1rem;
+}
+
+.popular-artist .singer {
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.popular-artist .singer div {
+    height: 100%;
+    width: 18%;
+}
+
+.popular-artist .singer img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.popular-artist .mood {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.popular-artist .mood div {
+    height: 100%;
+    width: 21%;
+    position: relative;
+
+}
+
+.popular-artist .mood img {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+
+
+.popular-artist .mood div h2 {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 36%;
+}
+
+.occassion {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.occassion div {
+    height: 100%;
+    width: 31.6%;
+    position: relative;
+}
+
+.occassion div img {
+    height: 100%;
+    width: 100%;
+}
+
+.occassion div h2 {
+    color: aqua;
+    position: absolute;
+    top: 40%;
+    left: 36%;
+}
+
+.top-mixes {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-mixes div {
+    height: 100%;
+    width: 18%;
+}
+
+.top-mixes div img {
+    height: 100%;
+    width: 100%;
+}
+
+/* hover effects  */
+/* hover for poupular artists */
+.popular-artist .singer div:hover {
+    transform: scale(1.1);
+    border-radius: 50%;
+    transition: .4s;
+    box-shadow: 0 0 4px 4px rgba(0, 255, 255, 0.238);
+
+}
+
+.popular-artist .mood div:hover {
+    transform: scale(1.1);
+    transition: .4s;
+    box-shadow: 0 0 4px 4px rgba(0, 255, 255, 0.238);
+}
+
+.popular-artist .mood:hover {
+    transform: scale(1.1);
+    transition: .4s;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.249);
+}
+
+.occassion:hover {
+    transform: scale(1.1);
+    transition: .4s;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.249);
+}
+
+.occassion div:hover {
+    transform: scale(1.1);
+    transition: .4s;
+    box-shadow: 0 0 4px 4px rgba(0, 255, 255, 0.238);
+}
+
+.top-mixes div:hover {
+    transform: scale(1.2);
+    transition: .5s;
+    box-shadow: 0 0 4px 4px rgba(0, 255, 255, 0.238);
+}
+
+
+
+/* animation for good-evening */
+@keyframes good {
+    0% {
+        opacity: 0;
+        background: orangered;
+    }
+
+    50% {
+        opacity: 1;
+        background-color: #4c5262;
+    }
+
+    90% {
+        opacity: 1;
+        background-color: rebeccapurple;
+    }
+
+    93% {
+        opacity: 1;
+        background-color: red;
+    }
+
+    95% {
+        opacity: 1;
+        background-color: rgb(153, 51, 68);
+    }
+
+    100% {
+        opacity: 1;
+        background-color: gainsboro;
+    }
+
+}
+
+/* Media querries for responsiveness */
+
+
+
+@media screen and (max-width:920px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner {
+        height: 20vh;
+    }
+
+    .container-music {
+        height: 20vh;
+    }
+
+    header .good-evening h1 {
+        font-size: 1rem;
+    }
+
+    .container-music .album .music-name h2 {
+        font-size: 1.3rem;
+    }
+
+    .container-music .album .music-name .subtitle {
+        font-size: .8rem;
+    }
+
+    .popular-artist div {
+        height: 15vh !important;
+    }
+
+    .popular-artist h2 {
+        margin-left: -18px;
+        font-size: 1rem;
+    }
+
+    .top-mixes {
+        height: auto;
+    }
+
+    .top-mixes div {
+        height: 18vh;
+    }
+
+    .occassion h2 {
+        margin-left: -18px;
+        font-size: 1.2rem;
+    }
+
+    header p {
+        font-size: .8rem;
+    }
+
+    header span a h3 {
+        font-size: 1rem;
+        margin-left: .9rem;
+    }
+
+    header .bell {
+        margin-right: 1rem;
+    }
+
+    #playlist h1 {
+        font-size: 1.5rem;
+    }
+
+    #playlist h3 {
+        font-size: 1rem;
+    }
+
+    .song div p {
+        font-size: .8rem;
+    }
+
+    .song h4 {
+        font-size: 1rem;
+    }
+}
+
+/* media query for mobile size */
+@media screen and (max-width:670px) {
+    body {
+        position: relative;
+    }
+
+    #play {
+        position: absolute;
+        width: 0;
+        height: 0;
+        z-index: 9;
+        overflow: hidden;
+    }
+
+    #play:target {
+        position: absolute;
+        opacity: 1;
+        width: 95vw;
+        height: 200vh;
+        transition: 1s ease-in-out;
+
+
+    }
+
+
+    #nav {
+        display: block;
+    }
+
+    #close {
+        position: absolute;
+        opacity: 1;
+        z-index: 999;
+    }
+
+    footer i {
+        font-size: 0;
+    }
+
+    header {
+        height: 10vh;
+    }
+
+    .album {
+        width: 100% !important;
+        height: 20vh !important;
+    }
+
+    .music-name {
+        width: 100%;
+    }
+
+    header h3 {
+        display: none;
+    }
+
+    .container-music {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .popular-artist div {
+        height: 13vh !important;
+    }
+
+    .top-mixes {
+        height: auto;
+    }
+
+    .top-mixes div {
+        height: 13vh;
+    }
+
+    .album {
+        width: 100%;
+    }
+
+    .banner {
+        height: 20vh;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    body {
+        flex-wrap: wrap;
+
+    }
+
+
+    .footer-song h3 {
+        font-size: 1rem;
+
+    }
+
+    .footer-sub {
+        font-size: .7rem;
+    }
+
+    .popular-artist div {
+        height: 14vh !important;
+    }
+
+}
